@@ -1,0 +1,13 @@
+<div class="btn-bar">
+  <!-- tab按钮区 -->
+  <div class="btn-box" id="btn-area">
+    <!--  <span class="btn" data-action="player" hidden>播放器</span>-->
+    <span class="btn" data-action="playing" title="正在播放列表" (click)="createComponent(0)">正在播放</span>
+    <span class="btn" data-action="sheet" title="音乐播放列表" (click)="createComponent(1)">播放列表</span>
+    <span class="btn" data-action="search" title="点击搜索音乐" (click)="createComponent('search')">歌曲搜索</span>
+  </div>
+</div>  <!--class="btn-bar"-->
+<div class="data-area" id="data-area">
+  <app-music-list  *ngIf="menuItemIndex==0"></app-music-list>
+  <app-song-list *ngIf="menuItemIndex==1" (onSongListClick)="onSongListClick($event)"></app-song-list>
+</div>  <!--class="data-area"-->

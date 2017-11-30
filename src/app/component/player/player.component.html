@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="con-btn">
+    <a href="javascript:;" class="player-btn btn-prev" title="上一首" (click)="prevBtnClick()"></a>
+    <a href="javascript:;" class="player-btn btn-play" title="播放" *ngIf="paused" (click)="playBtnClick()"></a>
+    <a href="javascript:;" class="player-btn btn-play btn-state-paused" title="暂停" *ngIf="!paused"
+       (click)="pauseBtnClick()"></a>
+    <a href="javascript:;" class="player-btn btn-next" title="下一首" (click)="nextBtnClick()"></a>
+  </div>  <!--class="con-btn"-->
+
+  <div class="vol">
+    <div class="quiet">
+      <a href="javascript:;" class="player-btn btn-quiet" [ngClass]="{'btn-state-quiet':isQuiet}"
+         title="静音" (click)="volumeClassBack(0)"></a>
+    </div>
+    <div class="volume">
+      <div class="volume-box">
+        <app-progress [percent]="volumePercent" (callbackEvent)="volumeClassBack($event)"></app-progress>
+      </div>
+    </div>
+  </div>  <!--class="footer"-->
+
+  <div class="progress-p">
+    <div class="progress-title">{{currentSong?currentSong.name:''}}</div>
+    <div class="progress-time">{{playData.currentTime | timeFormat:"mm:ss" }}/{{playData.duration | timeFormat:"mm:ss"
+      }}
+    </div>
+    <div class="progress-box">
+      <app-progress [percent]="progressPercent" (callbackEvent)="progressClassBack($event)"
+                    [locked]="progressLocked"></app-progress>
+    </div>
+    <div class="btn-box">
+      <a href="javascript:;" class="player-btn btn-model-order"
+         [ngClass]="{'btn-model-list':model=='list','btn-model-order':model=='order','btn-model-random':model=='random','btn-model-single':model=='single'}"
+         title="顺序播放[O]" (click)="changeModel()"></a>
+    </div>
+  </div>  <!--class="progress"-->
+</div>  <!--class="container"-->

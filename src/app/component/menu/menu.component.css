@@ -1,0 +1,55 @@
+/* 顶部按钮条 */
+.btn-bar {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  right: 400px;
+  height: 55px;
+}
+
+
+/* 顶部按钮区域 */
+.btn-box {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+/* 常规按钮 */
+.btn {
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  display: inline-block;
+  position: relative;
+  border-radius: 2px;
+  border: 1px solid #fff;
+  border: 1px solid rgba(150,150,150,.5);
+  color: #fff;
+  opacity: .8;
+  filter: alpha(opacity=80);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 6px 25px;
+  margin: 0 2px;
+}
+.btn:hover {
+  border: 1px solid #fff;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.btn[data-action='player'] {
+  display: none;
+}
+/* 左侧主体数据区 */
+.data-area {
+  position: absolute;
+  left: 0;
+  right: 400px;
+  top: 60px;
+  bottom: 0;
+  overflow: hidden;
+}
