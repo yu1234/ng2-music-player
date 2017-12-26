@@ -1,38 +1,32 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
-import {AppComponent} from './app.component';
-import {MenuComponent} from './component/menu/menu.component';
-import {MusicListComponent} from './component/music-list/music-list.component';
-import {SongListComponent} from './component/song-list/song-list.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
 
-import {AjaxService} from './service/ajax.service';
-import {AudioServiceService} from './service/audio-service.service';
-import {EventBusService} from './service/event-bus.service';
-import {PlayerComponent} from './component/player/player.component';
-import {ProgressComponent} from './component/progress/progress.component';
-import {TimeFormatPipe} from './pipe/time-format.pipe';
-import {SongInfoComponent} from './component/song-info/song-info.component';
+import {AuthenticationModule} from './modules/authentication/authentication.module';
+import {AuthenticationRoutingModule} from './modules/authentication/authentication-routing.module';
+import {AppRoutingModule} from './app-routing.module';
+
+import {AppComponent} from './app.component';
+import {GlobalService} from './service/global.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MenuComponent,
-    MusicListComponent,
-    SongListComponent,
-    PlayerComponent,
-    ProgressComponent,
-    TimeFormatPipe,
-    SongInfoComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule
+    BrowserModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    NgZorroAntdModule.forRoot(),
+    AppRoutingModule,
   ],
-  providers: [EventBusService, AjaxService, AudioServiceService],
+  providers: [GlobalService],
   bootstrap: [AppComponent],
-  entryComponents: [MusicListComponent, SongListComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {
 }
