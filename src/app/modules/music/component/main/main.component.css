@@ -1,0 +1,33 @@
+#main {
+  width: 100%;
+  min-width: 120rem;
+  height: 100%;
+  background-color: #292a2b;
+  overflow-y: hidden;
+}
+
+/* 模糊图像层 */
+#main #blur-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+/* 图像遮罩层 */
+#main .blur-mask {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .35);
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#main .content {
+  padding: 0 7.5%;
+}

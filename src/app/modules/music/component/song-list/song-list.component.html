@@ -1,0 +1,6 @@
+<div id="sheet" class="data-box">
+  <div class="sheet-item" *ngFor="let songSheet of songSheets;let i=index"  [attr.data-no]="i" (click)="songListClick(songSheet.id)">
+    <img class="sheet-cover" src="{{songSheet.cover}}">
+    <p class="sheet-name">{{songSheet.name}}</p>
+  </div>
+</div>

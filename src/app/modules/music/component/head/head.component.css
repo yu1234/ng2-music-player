@@ -1,0 +1,39 @@
+
+#head.header {
+  height: 5rem;
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  color: #8d9194;
+  cursor: pointer;
+  padding-left: 2rem;
+}
+/**
+logo样式
+ */
+#head .logo {
+
+  font-size: 2.3rem;
+
+}
+#head .logo:hover {
+  color: #fff;
+}
+/**
+logo样式
+ */
+#head .player-login{
+  font-size: 1.4rem;
+  text-align: right;
+  padding-right: 2rem;
+}
+#head .player-login-txt{
+  color: #8d9194;
+  line-height: 1.4rem;
+
+}
+#head .player-login-txt:hover {
+  color: #fff;
+}

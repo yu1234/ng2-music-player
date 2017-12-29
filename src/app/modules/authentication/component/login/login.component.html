@@ -1,0 +1,45 @@
+<div id="login">
+  <div class="cotn_principal">
+    <div class="cont_centrar">
+      <div class="cont_login">
+        <div class="cont_info_log_sign_up">
+          <div class="col_md_login">
+            <div class="cont_ba_opcitiy">
+              <h2>登录</h2>
+              <p>已有账号，直接登录！</p>
+              <button class="btn_login" (click)="cambiarLogin()">登录</button>
+            </div>
+          </div>
+          <div class="col_md_sign_up">
+            <div class="cont_ba_opcitiy">
+              <h2>注册</h2>
+              <p>还没有账号？免费注册！</p>
+              <button class="btn_sign_up" (click)="cambiarSignUp()">注册</button>
+            </div>
+          </div>
+        </div>
+        <div class="cont_back_info">
+          <div class="cont_img_back_grey"> <img src="/assets/images/po.jpg" alt="" /> </div>
+        </div>
+        <div class="cont_forms" >
+          <div class="cont_img_back_"> <img src="/assets/images/po.jpg" alt="" /> </div>
+          <div class="cont_form_login"> <i  (click)="ocultarLoginSignUp()" >X</i>
+            <h2>登录</h2>
+            <input type="text" placeholder="用户名"  name="username"  [(ngModel)]="loginUser.username"/>
+            <input type="password" placeholder="密码" name="password" [(ngModel)]="loginUser.password" />
+            <button class="btn_login" (click)="login()">登录</button>
+          </div>
+          <div class="cont_form_sign_up">
+            <i (click)="ocultarLoginSignUp()">X</i>
+            <h2>注册</h2>
+            <input type="text" placeholder="用户名(用于登录)" name="username"  [(ngModel)]="registerUser.username"/>
+            <input type="text" placeholder="昵称" name="nickname"  [(ngModel)]="registerUser.nickname"/>
+            <input type="password" placeholder="密码" name="password" [(ngModel)]="registerUser.password"/>
+            <input type="password" placeholder="确认密码" name="confirmPassword"  [(ngModel)]="registerUser.confirmPassword"/>
+            <button class="btn_sign_up" (click)="signUp()">注册</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

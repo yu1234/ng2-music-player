@@ -1,0 +1,47 @@
+/* 顶部按钮条 */
+#menu .btn-bar {
+  display: inline-block;
+  height: 5.5rem;
+  width: 100%;
+}
+
+/* 顶部按钮区域 */
+#menu .btn-box {
+  margin: 1rem;
+}
+
+/* 常规按钮 */
+
+#menu .btn {
+  opacity: .8;
+  filter: alpha(opacity=80);
+  border-color: rgba(255, 255, 255, .2);
+  background-color: transparent;
+  min-width: 122px;
+  text-align: center;
+  border-radius: 2px;
+  font-size: 14px;
+  margin-right: 6px;
+  padding: 0 23px;
+  height: 38px;
+  line-height: 38px;
+  display: inline-block;
+  white-space: nowrap;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#menu a.btn {
+  color: #8d9194;
+}
+
+#menu a.btn:hover {
+  color: #fff;
+  border: .15rem solid rgba(255, 255, 255, 1);
+}
+
+/* 左侧主体数据区 */
+#menu .data-area {
+  overflow: hidden;
+  width: 100%;
+}
